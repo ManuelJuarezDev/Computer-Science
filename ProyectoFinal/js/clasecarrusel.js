@@ -4,6 +4,11 @@ class ClaseCarrusel {
         this.data = []
     }
 
+    push(element) {
+        this.data.push(element)
+        return this.data
+      }
+
     async generos() {
         let url = `${URL_BASE}/genre/movie/list?api_key=${API_KEY}`
 
@@ -74,8 +79,13 @@ class ClaseCarrusel {
                         divPelicula.classList.add('pelicula')
                         let urlimg = "https://image.tmdb.org/t/p/w220_and_h330_face" + _registro.backdrop_path;
                         divPelicula.innerHTML = `
-                            <li class="scroll-item">
-                                <a onclick="peliculas(${_registro.id})""><img src="${urlimg}" title="${_registro.title}" alt=""></a>
+                            <li class="scroll-item" onclick="peliculas(${_registro.id})">
+                                <div class="card fondo_card" style="width: 18rem;">
+                                    <img class="card-img-top" src="${urlimg}" alt="Card image cap" onError="this.src='../../src/img/netflix-transparente.png';">
+                                    <div class="card-body card_body">
+                                        <span class="card-title">${_registro.title}</span>
+                                    </div>
+                                </div>
                             </li>
                         `
                         getParentElement.appendChild(divPelicula)
@@ -113,11 +123,17 @@ class ClaseCarrusel {
                         divPelicula.classList.add('pelicula')
                         let urlimg = "https://image.tmdb.org/t/p/w220_and_h330_face" + _registro.backdrop_path;
                         divPelicula.innerHTML = `
-                            <li class="scroll-item">
-                                <a onclick="peliculas(${_registro.id})"><img src="${urlimg}" title="${_registro.title}" alt=""></a>
+                            <li class="scroll-item" onclick="peliculas(${_registro.id})">
+                                <div class="card fondo_card" style="width: 18rem;">
+                                    <img class="card-img-top" src="${urlimg}" alt="Card image cap" onError="this.src='../../src/img/netflix-transparente.png';">
+                                    <div class="card-body card_body">
+                                        <span class="card-title">${_registro.title}</span>
+                                    </div>
+                                </div>
                             </li>
                         `
                         getParentElement.appendChild(divPelicula)
+                        this.data.push(_registro)
                     }
                 })
             }
@@ -148,12 +164,28 @@ class ClaseCarrusel {
                 divPelicula.classList.add('pelicula')
                 let urlimg = "https://image.tmdb.org/t/p/w220_and_h330_face" + _registro.backdrop_path;
                 divPelicula.innerHTML = `
-                            <li class="scroll-item">
-                                <a onclick="peliculas(${_registro.id})"><img src="${urlimg}" title="${_registro.title}" alt=""></a>
+                            <li class="scroll-item" onclick="peliculas(${_registro.id})">
+                                <div class="card fondo_card" style="width: 18rem;">
+                                    <img class="card-img-top" src="${urlimg}" alt="Card image cap" onError="this.src='../../src/img/netflix-transparente.png';">
+                                    <div class="card-body card_body">
+                                        <span class="card-title">${_registro.title}</span>
+                                    </div>
+                                </div>
                             </li>
                         `
                 getParentElement.appendChild(divPelicula)
             }
         })
     }
+
+    buscar(texto) {
+        let peliculasEncontradas = false
+        this.data.filter((pelicula) => {
+          let pos = pelicula.title.toUpperCase().search(texto.toString().toUpperCase())
+          if (pos != -1) {
+            peliculasEncontradas = true;
+          }
+        })
+        return peliculasEncontradas
+      }
 }

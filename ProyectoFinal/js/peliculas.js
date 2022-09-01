@@ -1,5 +1,3 @@
-// let API_KEY = '3083c8858744c8f5ad199d7bfa37ea15&language=es'
-
 let _peliculas = new ClasePeliculas()
 
 window.addEventListener('DOMContentLoaded', () => {
