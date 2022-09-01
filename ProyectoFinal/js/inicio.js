@@ -40,5 +40,6 @@ txtBuscar.addEventListener('keypress', (e) => {
 })
 
 window.addEventListener('DOMContentLoaded', () => {
+  _carruseles.cargarCarruselPopulares();
   _carruseles.cargarCarruselesGeneros();
 })
