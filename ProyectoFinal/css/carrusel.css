@@ -1,0 +1,78 @@
+
+
+/* limit width so that content will need to scroll */
+main {
+	max-width:100em;
+  }
+  
+  /* SCROLL SNAPPING */
+  .scroll-container {
+	overflow-x: auto;
+	
+	margin: 0;
+	padding: 0;
+	height: 300px;
+	list-style: none;
+	}
+
+  .scroll-item {
+	scroll-snap-align: center;
+  }
+  /* make 3rd item bigger to show that items don't need to have the same width */
+  .scroll-item:nth-child(3) {
+	width: 15em;
+  }
+  /* make 5th item bigger to show that items don't need to have the same width */
+  .scroll-item:nth-child(5) {
+	height: 15em;
+  }
+  
+  /* FLEXBOX LAYOUT */
+  .scroll-container[data-layoutmethod="flexbox"] {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center; /* vertically align children */
+	}
+  .scroll-container[data-layoutmethod="flexbox"] .scroll-item {
+	margin-right: 1em; /* fake gap */
+	flex: 0 0 auto;
+  }
+  
+  /* GRID LAYOUT */
+  .scroll-container[data-layoutmethod="grid"] {
+	display: grid;
+	grid: auto / auto-flow max-content;
+	grid-gap: 1em;
+	align-items: center; /* vertically align children */
+  }
+  
+  /** OTHER STYLES **/
+  body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	text-rendering: optimizeLegibility;
+	margin: 0;
+	padding: 0;
+  }
+	
+	.sectioncarrusel{
+		padding-top: 80px;
+	}
+  /* center main element */
+  main {
+	margin: 0 auto;
+	padding: 0 1em;
+	border: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  /* remove list styles */
+  .scroll-item {
+	/* make it square */
+	width: 10em;
+	height: 10em;
+  
+	  
+	/* center contents */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pelicula.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pelicula</title>
+</head>
+
+<body>
+    <header class="encabezado flex_horizontal">
+        <div class="logo">
+            <a onclick="home()">
+                <img src="../../src/img/netflix-transparente.png" alt="Netflix">
+            </a>
+        </div>
+        <nav class="usuario">
+            <ul class="usuario_contendido">
+                <li class="opcion" title="Notificaciones">
+                    <i class="fa fa-bell-o"></i>
+                </li>
+                <li class="opcion" title="">
+                    <a href="../usuarios/index.html">
+                        <img class="img_user" src="../../src/img/avatar-1.png" alt="No image">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="multimedia">
+        <div class="multimedia_backdrop padding_top_md">
+            <div id="titulo" class="pelicula_titulo"></div>
+            <div id="duracion" class="pelicula_duracion"></div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div id="descripcion" class="pelicula_descripcion"></div>
+                </div>
+                <div class="col">
+                    <div class="">Actores:</div>
+                    <ul id="actores" class="flex_horizontal_2"></ul>
+                </div>
+            </div>
+
+            <div><button type="button" class="btn btn-danger pelicula_reproducir">Reproducir</button></div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../../js/clasepeliculas.js"></script>
+    <script src="../../js/generales.js"></script>
+    <script src="../../js/peliculas.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+# RewriteCond %{HTTP:Authorization} ^(.*)
+# RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+# <IfModule mod_rewrite.c>
+    # RewriteEngine On
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteRule ^((?s).*)$ index.php?_url=/$1 [QSA,L]
+# </IfModule>
+# 
+# <FilesMatch "(\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp|json|phar|wsdl|gitignore)|~)$">
+    # RedirectMatch 404 $
+# </FilesMatch>
+
+
+
+# Activar RewriteEngine
+RewriteEngine on
+
+# RewriteCond %{SERVER_PORT} 80
+
+# $ RewriteBase /
+
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME}.php -f
+
+#   Reescribir la URL solicitada por el usuario
+
+#   Home
+RewriteRule ^inicio/$ index.php [L]
+RewriteRule  ^recurso/(.+)$ index.php?_url=$1 [L]
+
+#   Producto
+#   Entrada: producto/NOMBRE_PRODUCTO/
+#   Salida: productos.php?id=NOMBRE_PRODUCTO
+RewriteRule ^producto/(.*)$  productos.php?id=$1 [L]
+
+<FilesMatch "(\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp|json|phar|wsdl|gitignore)|~)$">
+    # RedirectMatch 404 $
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>

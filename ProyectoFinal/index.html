@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Netflix</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="src/img/netflix-transparente.png" alt="Netflix">
+        </div>
+    </header>
+
+    <section class="login">
+        <div class="login-contenido">
+            <form action="opciones/usuarios/index.html">
+                <h1> Inicia sesión </h1>
+                <input type="email" placeholder="Email o número de teléfono">
+                <input type="password" placeholder="Contraseña">
+                <button type="submit">Iniciar sesión</button>
+                <div class="opciones_ayuda">
+                    <div>
+                        <input name="inp_recuerdame" id="inp_recuerdame" value="true" type="checkbox"><label
+                            for="inp_recuerdame">Recuerdame</label>
+                    </div>
+                    <span href="#">¿Necesitas ayuda?</span>
+                </div>
+            </form>
+            <p class="titulo_1">¿Primera vez en Netflix? <span href="#">Suscríbete ahora.</span></p>
+            <p class="titulo_2">
+                Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot.
+                <a href="#">Más info.</a>
+            </p>
+        </div>
+    </section>
+
+    <footer class="pie">
+        <div class="pie_contenido">
+            <p>¿Preguntas? Llama al 800-522-9957</p>
+            <div class="opciones_extras">
+                <span class="item_opc_extra" href="#">Preguntas frecuentes</span>
+                <span class="item_opc_extra" href="#">Centro de ayuda</span>
+                <span class="item_opc_extra" href="#">Términos de uso</span>
+                <span class="item_opc_extra" href="#">Privacidad</span>
+                <span class="item_opc_extra" href="#">Preferencias de cookies</span>
+                <span class="item_opc_extra" href="#">Información corporativa</span>
+            </div>
+            <select name="idiomas" id="idiomas" class="select_pais">
+                <option selected>Ingles</option>
+                <option>Español</option>
+            </select>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

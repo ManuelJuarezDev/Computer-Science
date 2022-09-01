@@ -1,0 +1,23 @@
+.pelicula_titulo {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.pelicula_duracion {
+  font-size: 20px;
+}
+
+.pelicula_descripcion {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.pelicula_genero {
+  font-size: 20px;
+}
+
+.pelicula_reproducir {
+  padding: 15px;
+  margin-top: 30px;
+  font-weight: bold;
+}
