@@ -89,6 +89,7 @@ class ClaseCarrusel {
                             </li>
                         `
                         getParentElement.appendChild(divPelicula)
+                        this.data.push(_registro)
                     }
                 })
     }

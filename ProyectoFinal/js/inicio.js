@@ -7,9 +7,9 @@ txtBuscar.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     e.preventDefault()
     if (_carruseles.buscar(txtBuscar.value)) {
-      mensaje(`La película se encuentrá en catálogo.`)
+      mensaje(`La película se encuentra en catálogo.`)
     } else {
-      mensaje(`La película no está en catálogo.`)
+      mensaje(`La película no se encuentra en catálogo.`)
     }
   }
 })
