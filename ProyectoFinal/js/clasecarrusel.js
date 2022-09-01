@@ -75,7 +75,7 @@ class ClaseCarrusel {
                         let urlimg = "https://image.tmdb.org/t/p/w220_and_h330_face" + _registro.backdrop_path;
                         divPelicula.innerHTML = `
                             <li class="scroll-item">
-                                <a href="/opciones/peliculas/index.html?id=${_registro.id}"><img src="${urlimg}" alt=""></a>
+                                <a onclick="peliculas(${_registro.id})""><img src="${urlimg}" title="${_registro.title}" alt=""></a>
                             </li>
                         `
                         getParentElement.appendChild(divPelicula)
@@ -114,7 +114,7 @@ class ClaseCarrusel {
                         let urlimg = "https://image.tmdb.org/t/p/w220_and_h330_face" + _registro.backdrop_path;
                         divPelicula.innerHTML = `
                             <li class="scroll-item">
-                                <a onclick="peliculas(${_registro.id})"><img src="${urlimg}" alt=""></a>
+                                <a onclick="peliculas(${_registro.id})"><img src="${urlimg}" title="${_registro.title}" alt=""></a>
                             </li>
                         `
                         getParentElement.appendChild(divPelicula)
@@ -149,7 +149,7 @@ class ClaseCarrusel {
                 let urlimg = "https://image.tmdb.org/t/p/w220_and_h330_face" + _registro.backdrop_path;
                 divPelicula.innerHTML = `
                             <li class="scroll-item">
-                                <a href="/opciones/peliculas/index.html?id=${_registro.id}"><img src="${urlimg}" alt=""></a>
+                                <a onclick="peliculas(${_registro.id})"><img src="${urlimg}" title="${_registro.title}" alt=""></a>
                             </li>
                         `
                 getParentElement.appendChild(divPelicula)

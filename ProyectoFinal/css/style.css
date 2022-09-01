@@ -143,8 +143,8 @@ span:hover {
   height: fit-content;
 }
 .pelicula:hover {
-  transition: transform 0.3s;
-  transform: scale(1.15);
+  transition: transform 0.2s;
+  transform: scale(1.05);
 }
 
 
