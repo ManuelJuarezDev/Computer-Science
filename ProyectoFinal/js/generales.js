@@ -5,13 +5,14 @@ API_KEY = '3083c8858744c8f5ad199d7bfa37ea15&language=es'
 URL_BASE = 'https://api.themoviedb.org/3'
 
 function home() {
-    window.location.href = '/opciones/inicio/'
+    window.location.href = './../inicio'
 }
 
 function peliculas(id) {
-    window.location.href = '/opciones/peliculas/index.html?id='+id
+    window.location.href = '.././peliculas/index.html?id='+id
+    ''
 }
 
 function actores(id) {
-    window.location.href = '/opciones/actores/index.html?id='+id
+    window.location.href = '.././actores/index.html?id='+id
 }

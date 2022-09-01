@@ -39,7 +39,6 @@ class ClaseCarrusel {
 
     cargarCarruselesGeneros() {
         this.generos().then((r) => {
-            // console.log(r.data.genres.length)
             for (let genero of r) {
                 var getParentElement = document.getElementById('sectioncarrusel')
 
@@ -69,7 +68,7 @@ class ClaseCarrusel {
                         let urlimg = "https://image.tmdb.org/t/p/w220_and_h330_face" + _registro.backdrop_path;
                         divPelicula.innerHTML = `
                             <li class="scroll-item">
-                                <a href="/opciones/peliculas/index.html?id=${_registro.id}"><img src="${urlimg}" alt=""></a>
+                                <a onclick="peliculas(${_registro.id})"><img src="${urlimg}" alt=""></a>
                             </li>
                         `
                         getParentElement.appendChild(divPelicula)

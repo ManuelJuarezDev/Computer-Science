@@ -30,23 +30,6 @@ function cargarInformacion() {
   })
 }
 
-const buscar = (texto) => {
-  let peliculasEncontradas = []
-  peliculasEncontradas = _peliculas.data.filter((pelicula) => {
-    pos = pelicula.titulo.toUpperCase().search(texto.toString().toUpperCase())
-    if (pos != -1) {
-      return pelicula
-    }
-  })
-
-  let msj =
-    peliculasEncontradas.length > 0
-      ? 'Existe la pelicula'
-      : 'No existe la pelicula'
-  alert(msj)
-
-  return peliculasEncontradas
-}
 
 txtBuscar.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
@@ -57,8 +40,5 @@ txtBuscar.addEventListener('keypress', (e) => {
 })
 
 window.addEventListener('DOMContentLoaded', () => {
-  //document.getElementsByClassName('multimedia')[0].style.backgroundImage =
-  //  "url('../../src/img/fondo-2.jpg')"
-  //cargarInformacion()
   _carruseles.cargarCarruselesGeneros();
 })
